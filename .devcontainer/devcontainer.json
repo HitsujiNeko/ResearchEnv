@@ -11,14 +11,6 @@
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
 
-	// // Google Driveのデータディレクトリをマウント
-	
-	// source に Google Driveのパスを指定すること(例:/mnt/c/Users/Username/マイドライブ/ResearchData)
-
-	"mounts": [
-    "source=ここにパスを指定,target=/workspaces/ResearchEnv/workspace/data/,type=bind"
-	],
-
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 
