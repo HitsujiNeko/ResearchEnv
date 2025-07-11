@@ -6,23 +6,24 @@
 		"context": "..",
 		"dockerfile": "Dockerfile"
 	},
-	"runArgs": [
-   		 ".devcontainer/devcontainer.env"
- 	],
+
+
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
 
 	// // Google Driveのデータディレクトリをマウント
 	
-	// "mounts": [
-    // "source=${localEnv:GOOGLE_DRIVE_PATH},target=/workspaces/Research/workspace/data,type=bind"
-	// ],
+	// source に Google Driveのパスを指定すること(例:/mnt/c/Users/Username/マイドライブ/ResearchData)
+
+	"mounts": [
+    "source=ここにパスを指定,target=/workspaces/ResearchEnv/workspace/data/,type=bind"
+	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "echo GOOGLE_DRIVE_PATH=$GOOGLE_DRIVE_PATH",
+	// "postCreateCommand": "",
 
 	// Configure tool-specific properties.
 	"customizations": {
@@ -42,7 +43,8 @@
 		"christian-kohler.path-intellisense",
 		"ms-python.debugpy",
 		"mechatroner.rainbow-csv",
-		"ms-toolsai.datawrangler"
+		"ms-toolsai.datawrangler",
+		"usernamehw.errorlens"
 	]
     }
   }

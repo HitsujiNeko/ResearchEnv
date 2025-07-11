@@ -2,6 +2,10 @@
 
 このリポジトリは、Google Drive上のデータを活用したデータサイエンス・分析のための開発環境（Dev Container + conda）を簡単に構築できるテンプレートです。
 
+前提条件： Windowsの場合
+- すでにwsl2をインストールしている
+- DockerDesktopをインストールしてUbuntuに設定
+
 ---
 
 ## 構成
@@ -19,14 +23,15 @@
 3. ローカルにGoogle Driveフォルダを同期（例: `/mnt/c/Users/ユーザー名/Google Drive/ResearchData`）
 ※　設定をミラーリングにすること
 
-### 2. .envファイルの編集
-- `.env` ファイルの `GOOGLE_DRIVE_PATH` を自分の環境に合わせて編集してください。
+### 2. devcontainer.jsonファイルの編集
+- devcontainer.json ファイルの 18行目 を自分の環境に合わせて編集してください。
+  sourceのみを変更すること　targetは基本的にそのままでOK
   例:
   ```
   Windows上のパスが以下の場合
   "c:\Users\LabAdmin\マイドライブ\ResearchData"
   wsl用のパスは以下のようになる
- GOOGLE_DRIVE_PATH=/mnt/c/Users/LabAdmin/マイドライブ/ResearchData
+  source=/mnt/c/Users/LabAdmin/マイドライブ/ResearchData
   ```
 
 ### 3. Dev Containerの起動
