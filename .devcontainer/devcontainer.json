@@ -6,19 +6,23 @@
 		"context": "..",
 		"dockerfile": "Dockerfile"
 	},
-
+	"runArgs": [
+   		 ".devcontainer/devcontainer.env"
+ 	],
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
 
-	// Google Driveのデータディレクトリをマウント
-    "mounts": [
-        "source=${env:GOOGLE_DRIVE_PATH},target=/workspace/data,type=bind"
-    ],
+	// // Google Driveのデータディレクトリをマウント
+	
+	// "mounts": [
+    // "source=${localEnv:GOOGLE_DRIVE_PATH},target=/workspaces/Research/workspace/data,type=bind"
+	// ],
+
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "python --version",
+	"postCreateCommand": "echo GOOGLE_DRIVE_PATH=$GOOGLE_DRIVE_PATH",
 
 	// Configure tool-specific properties.
 	"customizations": {
@@ -44,4 +48,5 @@
   }
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
+	
 }

@@ -17,15 +17,16 @@
 1. Google DriveクライアントをPCにインストールし、同じGoogleアカウントでログイン
 2. データ用フォルダ（例: `ResearchData`）をGoogle Drive上に作成
 3. ローカルにGoogle Driveフォルダを同期（例: `/mnt/c/Users/ユーザー名/Google Drive/ResearchData`）
+※　設定をミラーリングにすること
 
 ### 2. .envファイルの編集
 - `.env` ファイルの `GOOGLE_DRIVE_PATH` を自分の環境に合わせて編集してください。
   例:
   ```
   Windows上のパスが以下の場合
-  "G:\マイドライブ\ResearchData"
+  "c:\Users\LabAdmin\マイドライブ\ResearchData"
   wsl用のパスは以下のようになる
-  /mnt/g/マイドライブ/ResearchData
+ GOOGLE_DRIVE_PATH=/mnt/c/Users/LabAdmin/マイドライブ/ResearchData
   ```
 
 ### 3. Dev Containerの起動
